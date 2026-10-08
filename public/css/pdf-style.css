@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa; /* Color de fondo suave */
+}
+
+.card {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px; /* Ancho máximo de la tarjeta */
+}
+
+.card-header {
+    background-color: #8B0000; /* Rojo vinotinto */
+    color: white;
+    padding: 10px;
+    border-radius: 15px 15px 0 0; /* Bordes redondeados en la parte superior */
+    text-align: center;
+}
+
+.card-content {
+    margin-top: 15px;
+    color: #333; /* Color de texto */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #8B0000; /* Rojo vinotinto */
+    color: white;
+    border: 1px solid #ddd; /* Asegúrate de que haya un borde definido */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 12px; /* Aumenta el padding si es necesario */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Filas alternas con fondo gris claro */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Color de fondo al pasar el mouse */
+}
+
+strong {
+    color: #000000; /* Color rojo */
+}
+
+.text-G {
+    font-size: 24px; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold; /* Mantiene el texto en negrita */
+}
+
+.text-M {
+    font-size: 18px; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold; /* Mantiene el texto en negrita */
+}

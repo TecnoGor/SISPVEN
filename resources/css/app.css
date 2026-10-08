@@ -1,0 +1,48 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Additional styles */
+@import 'additional-styles/utility-patterns.css';
+@import 'additional-styles/flatpickr.css';
+
+@import 'tailwindcss/utilities';
+
+/* Alpine: ocultar elementos con x-cloak hasta que Alpine inicialice
+   (evita el parpadeo del sidebar en cargas lentas antes de que apliquen los :style) */
+[x-cloak] {
+    display: none !important;
+}
+
+/* Tom Select: asegurar que el dropdown aparezca sobre los modales */
+.ts-dropdown {
+    z-index: 9999 !important;
+}
+
+/* Sidebar: bullet y separador para sub-ítems de cada módulo */
+#sidebar ul.pl-4 > li > a::before {
+    content: '•';
+    margin-right: 0.4rem;
+    opacity: 0.5;
+}
+
+#sidebar ul.pl-4 > li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.25rem;
+}
+
+/* Sidebar: ocultar sub-ítems sin contenido visible (usuario sin permiso) */
+/* Caso 1: el <li> no tiene ningún <a> dentro (el @can envuelve el <a>) */
+#sidebar ul.pl-4 > li:not(:has(a)) {
+    display: none;
+}
+
+/* Caso 2: el <li> tiene un <a> pero sin <span> (el @can envuelve solo el <span>) */
+#sidebar ul.pl-4 > li:has(> a:not(:has(span))) {
+    display: none;
+}
+
+/* Ocultar el <div> contenedor si ninguno de sus <li> tiene contenido visible */
+#sidebar div.lg\:hidden:has(> ul.pl-4):not(:has(ul.pl-4 > li a span)) {
+    display: none;
+}
+
